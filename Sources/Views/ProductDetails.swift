@@ -74,7 +74,7 @@ struct ProductDetails: View {
                         withAnimation {
                             proxy.scrollTo(ProductDetails.barcodeTag)
                         }
-                    }
+                    }.foregroundColor(Color(red:95/255,green:105/255,blue:53/255))
                     .padding()
                 })
                 .padding(20)

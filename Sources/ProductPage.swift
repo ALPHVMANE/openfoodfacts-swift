@@ -125,6 +125,7 @@ public struct ProductPage: View {
             }
         })
     }
+    .background(Color(red: 26/255, green: 17/255, blue: 16/255))
 }
 
 #Preview {

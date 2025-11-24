@@ -12,7 +12,7 @@ struct RoundedBackgroundCard: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .padding(EdgeInsets(top: 20, leading: 10, bottom: 20, trailing: 10)).background(Color(red: 26/255, green: 17/255, blue: 16/255)).cornerRadius(25)
+            .padding(EdgeInsets(top: 20, leading: 10, bottom: 20, trailing: 10)).background(Color(red: 39/255, green: 29/255, blue: 28/255)).cornerRadius(25)
     }
 }
 
