@@ -58,7 +58,7 @@ struct ArrowToggleStyle: ToggleStyle {
                 }
             }
         }
-        .foregroundColor(.blue)
+        .foregroundColor(Color(red:57/255,green:76/255,blue:76/255))
         .font(.system(size: 24, weight: .bold))
         .frame(width: 50, height: 40)
         .cornerRadius(20)

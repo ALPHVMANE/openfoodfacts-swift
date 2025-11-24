@@ -44,6 +44,7 @@ struct ProductDetails: View {
                                     Text(lang.info.description)
                                 }
                             }.disabled(pageConfig.isViewMode)
+                            .foregroundStyle(Color(red:95/255,green:105/255,blue:53/255))
                         }.id(ProductDetails.productPackageLanguageTag)
                     }).modifier(RoundedBackgroundCard())
                     

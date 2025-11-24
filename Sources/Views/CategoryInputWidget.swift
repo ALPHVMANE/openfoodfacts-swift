@@ -68,6 +68,7 @@ struct CategoryInputWidget: View {
                         addCategory()
                     }) {
                         Image(systemName: "plus.circle.fill")
+                        .foregroundStyle(Color(red:57/255,green:76/255,blue:76/255))
                     }
                 }
                 .padding(.vertical,5)
