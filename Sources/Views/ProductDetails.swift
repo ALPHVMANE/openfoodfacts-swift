@@ -31,11 +31,11 @@ struct ProductDetails: View {
                     VStack(alignment: .leading, spacing: ProductDetails.lineSpacing, content: {
                         EditorHeader(title: "Basic details", systemImage: "pencil")
                         if OFFConfig.shared.useRequired && pageConfig.isNewMode {
-                            ExpandableText(text: "Fields with a star * - are a bare minimum.")
+                            ExpandableText(text: "Fields with a star * - are required.")
                         }
                         FloatingLabelTextField(title: "Product's name", placeholder: "Product's name", text: $pageConfig.productName, isRequired: pageConfig.isNewMode)
                         FloatingLabelTextField(title: "Brand", placeholder: "Brand name", text: $pageConfig.brand, isRequired: pageConfig.isNewMode)
-                        FloatingLabelTextField(title: "Weight", placeholder: "Product's weight in grams, for e.g. '100'", text: $pageConfig.weight, isRequired: pageConfig.isNewMode, mode: .onlyDigits)
+                        FloatingLabelTextField(title: "Weight", placeholder: "Product's weight in grams", text: $pageConfig.weight, isRequired: pageConfig.isNewMode, mode: .onlyDigits)
                         HStack {
                             Text("Product's package language")
                             Spacer()
@@ -49,28 +49,21 @@ struct ProductDetails: View {
                     
                     VStack(alignment: .leading, spacing: ProductDetails.lineSpacing, content: {
                         EditorHeader(title: "Photos", systemImage: "photo.stack.fill")
-                        Button(action: {
-                            withAnimation {
-                                proxy.scrollTo(ProductDetails.productPackageLanguageTag, anchor: .center)
-                            }
-                        }) {
-                            Text("package in \(pageConfig.packageLanguage.info.description) language").font(.subheadline)
-                        }
-                        ExpandableText(text: "Photos of product's front and nutrients description are required for data validation. Change language in in basic details for product's package language.")
+                        ExpandableText(text: "Please select the icon for more details on the text input" + "\n\n" + "Photos of product's front and nutrients description are required for data validation. Please add a photo of the product, the nutrition facts, and the ingredients")
                         ImagesCarousel()
                         
                     }).modifier(RoundedBackgroundCard())
                     
                     VStack(alignment: .leading, spacing: ProductDetails.lineSpacing, content: {
                         EditorHeader(title: "Categories", systemImage: "fork.knife")
-                        ExpandableText(text: "Indicate only the most specific category. Parent categories will be automatically added." + "\n\n" + "Examples: Sardines in olive oil, Orange juice from concentrate")
+                        ExpandableText(text: "Please select the icon for more details on the text input" + "\n\n" + "Indicate only the most specific category. Parent categories will be automatically added." + "\n" + "Examples: Sardines in olive oil, Orange juice from concentrate")
                         CategoryInputWidget(categories: $pageConfig.categories)
                     }).modifier(RoundedBackgroundCard())
                     
                     VStack(alignment: .leading, spacing: ProductDetails.lineSpacing, content: {
                         EditorHeader(title: "Nutrition facts", systemImage: "leaf")
-                        ExpandableText(text: "Indicate per what amount nutrient values: per 100g or per serving size")
-                        FloatingLabelTextField(title: "Serving size", placeholder: "Serving size, for e.g. '15'", text: $pageConfig.servingSize, mode: .onlyDigits)
+                        ExpandableText(text: "Please select the icon for more details on the input" + "\n\n" + "Indicate per what amount nutrient values: per 100g or per serving size")
+                        FloatingLabelTextField(title: "Serving size", placeholder: "Serving size", text: $pageConfig.servingSize, mode: .onlyDigits)
                         NutrimentsEntryTable()
                         
                     }).modifier(RoundedBackgroundCard())

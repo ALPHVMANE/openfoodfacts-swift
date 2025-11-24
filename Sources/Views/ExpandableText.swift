@@ -58,6 +58,7 @@ struct ExpandableText: View {
                     Image(systemName: expanded ? "chevron.up.circle" : "info.circle")
                         .resizable()
                         .frame(width: 20, height: 20)
+                        .foregroundColor(Color(red:95/255,green:105/255,blue:53/255))
                 }.padding(.top, 5)
             }
         })

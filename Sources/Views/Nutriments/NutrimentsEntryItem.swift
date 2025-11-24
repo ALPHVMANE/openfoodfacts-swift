@@ -41,7 +41,7 @@ struct NutrimentsEntryItem: View {
                 }
             }, label: {
                 Text(nutrient.currentUnit.rawValue).padding().frame(width: 80, height: 30)
-            }).background(Color.blue).cornerRadius(6).foregroundColor(Color.white).disabled(pageConfig.isViewMode)
+            }).background(Color(red:95/255,green:105/255,blue:53/255)).cornerRadius(6).foregroundColor(Color.white).disabled(pageConfig.isViewMode)
         }
         .onAppear {
             if pageConfig.isNewMode {

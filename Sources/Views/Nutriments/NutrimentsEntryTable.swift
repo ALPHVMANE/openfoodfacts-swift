@@ -36,7 +36,7 @@ public struct NutrimentsEntryTable: View {
                         Spacer()
                     }.frame(maxWidth: .infinity).padding()
                 }
-                .background(Color.blue)
+                .background(Color(red:95/255,green:105/255,blue:53/255))
                 .foregroundColor(Color.white)
                 .cornerRadius(8)
             }
