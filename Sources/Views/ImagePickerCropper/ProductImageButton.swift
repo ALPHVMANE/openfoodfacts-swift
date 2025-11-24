@@ -20,9 +20,9 @@ struct ProductImageButton: View {
     func imageView() -> some View {
         if self.image.isEmpty() {
             Image(systemName: "photo.badge.plus.fill")
-                .foregroundStyle(Color(red:57/255,green:76/255,blue:76/255)) 
                 .resizable().aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 80)
+                .foregroundColor(Color(red:57/255,green:76/255,blue:76/255)) 
                 .padding(5)
         } else {
             Image(uiImage: self.image)
